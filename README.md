@@ -4,7 +4,7 @@
 
 Run phpcpd on your current work directory
 ```
-docker run -it --rm -name phpcpd \
+docker run -it --rm --name phpcpd \
     -v "$(pwd)":/app \
     gruen/phpcpd
 ```
