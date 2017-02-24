@@ -16,5 +16,5 @@ RUN apk --no-cache --progress --update add \
     && chmod 700 ./phpcpd
 
 WORKDIR /app
-VOLUME [ "/app" ]
+
 ENTRYPOINT [ "phpcpd" ]
