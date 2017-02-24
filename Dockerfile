@@ -14,5 +14,7 @@ RUN apk --no-cache --progress --update add \
     ca-certificates \
     && wget https://phar.phpunit.de/phpcpd.phar -O phpcpd \
     && chmod 700 ./phpcpd
+
+WORKDIR /app
 VOLUME [ "/app" ]
-ENTRYPOINT [ "phpcpd", "/app" ]
+ENTRYPOINT [ "phpcpd" ]
