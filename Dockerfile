@@ -2,16 +2,13 @@
 #
 # docker run -it --rm --name phpcpd \
 #     -v [path/to/code]:/app \
-#     gruen/phpcpd[:tag]
+#     gruen/phpcpd[:tag] [path/relative/to/app] [options]
 #
-FROM alpine:3.3
+FROM php:5.6-alpine
 MAINTAINER Darren Green <darren@gruen.site>
 WORKDIR /usr/local/bin
 RUN apk --no-cache --progress --update add \
     wget \
-    php \
-    php-phar \
-    ca-certificates \
     && wget https://phar.phpunit.de/phpcpd.phar -O phpcpd \
     && chmod 700 ./phpcpd
 
